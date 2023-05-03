@@ -7,6 +7,10 @@ html[theme='dark-mode'] {
 }
 body {
   background-color: #2e373e;
+
+  margin: 0 10px;
+
+
 }
 
 h1 {
@@ -134,12 +138,77 @@ Following is the location of M42 I measured:
 <div class="image-container">
   <img src="whereM42.png" alt="Description of the image" width="800" >
 </div>
+<hr>
 <p class="paragraph">
   The spectrum image I got
   </p>
+<hr>
 <div class="image-container">
   <img src="spectrumResult.png" alt="Description of the image" width="800" >
 </div>
+<hr>
+<p class="paragraph">
+  Then, I subtracted dark, bias, devided the flat. For both images, I took a image of Regulus to calibrate my flux. I was able to find the Regulus calibration in the red range of the spectrum so the following is my calibrated spectrum across the entire slit.
+</p>
+<hr>
+<div class="image-container">
+  <img src="RedSpectrum.png" alt="Description of the image" width="800" >
+</div>
+<hr>
+<p class="paragraph">
+  The blue spectrum didn't went as smoothly. It didn't have a calibration file stored in Iraf for blue part of Regulus. Thus, I need to make one myself. I first got rid of all absorbtion and emission lines on the regulus, and fit a polynomial to it:
+</p>
+<hr>
+<div class="image-container">
+  <img src="redRegulusObserved.png" alt="Description of the image" width="800" >
+</div>
+<hr>
+<p class="paragraph">
+  Then assuming its a black body I generated a black body fit:
+</p>
+<hr>
+<div class="image-container">
+  <img src="blueRegulusTheoretical.png" alt="Description of the image" width="800" >
+</div>
+<hr>
+<p class="paragraph">
+  Finally getting a calibration data (you time the observation to this and get the real data) (this is basically inverse sensitivity)
+</p>
+<hr>
+<div class="image-container">
+  <img src="calibration.png" alt="Description of the image" width="800" >
+</div>
+<hr>
+<p class="paragraph">
+  the result is:
+</p>
+<hr>
+<div class="image-container">
+  <img src="finalblue.png" alt="Description of the image" width="800" >
+</div>
+<hr>
+
+<h2>Results</h2>
+<p class="paragraph">
+  The first thing I did is to measure the intensity / H-beta for the total slits. The result is:
+</p>
+<hr>
+<div class="image-container">
+  <img src="extinctTable.png" alt="Description of the image" width="500" >
+</div>
+<hr>
+<p class="paragraph">
+  I then looked at the extinction by location on the slit, and the following is my result:
+</p>
+<hr>
+<div class="image-container">
+  <img src="byYExtinction.png" alt="Description of the image" width="800" >
+</div>
+<hr>
+
+<h2>
+  Analysis
+</h2>
 
 </body>
 </html>
