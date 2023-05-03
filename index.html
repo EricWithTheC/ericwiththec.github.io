@@ -1,19 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+html[theme='dark-mode'] {
+  filter: invert(1) hue-rotate(180deg);
+}
+body {
+  background-color: #2e373e;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+
+
+}
+
+.paragraph {
+  margin: 0 auto;
+  max-width: 1200px; /* adjust this value to your desired width */
+  text-align: left;
+
+}
+
+.author {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.author sup {
+    font-size: 16px;
+}
+
+.author em {
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid transparent;
+    margin: 1em 0;
+}
 
 
 
-
-<link rel="stylesheet" type="text/css" href="style.css">
-
-
+</style>
+<!-- <link rel="stylesheet" href="mystyle.css"> -->
 </head>
-
 <body>
 
-<h1>Measuring the Color Excess of M42 using the Balmer Decrement</h1>
-<p>This is a paragraph.                  wwwwwwwww</p>
+<h1>Measuring the Reddening of M42 using the Balmer Decrement</h1>
+<p class="author">
+  Eric Cai<sup>1</sup><br>
+  <em>1</em> Rice University, ericwiththec@rice.edu<br>
+
+  <em>Date:</em> May 2, 2023<br>
+  <em>Department:</em> Physics and Astronomy
+</p>
+
+<hr>
+
+<h2>Introduction</h2>
+<p class="paragraph">
+This paper looks into the Balmer lines of Orion Nebula, M42, and attempted to measure the reddening of this emission nebula. The paper utilizes the Balmer decrement to get a relative ratio between the Balmer lines in the nebula, and further derived an elegant way to describe reddening with the Balmer Decrement
+</p>
+<h2>Balmer Decrement and Interstellar Reddening</h2>
+
+<p class="paragraph">
+In H2 regions, which is basically ionized hydrogen regions, exist free electrons and ionized hydrogens, or to say, hydrogen nuclei. Sometime a electron will fell into this hydrogen nuclei, and release some energy. If the electron drop to a layer of n > 2, and then drop to n=2, it releases a Balmer line, that is a line that can be observed in the opticals. 
+
+</p>
+<hr color="transparent">
+<div class="image-container">
+  <img src="balmerDecrement.png" alt="Description of the image" width="800" >
+</div>
+<hr color="transparent">
+<p class="paragraph">
+  
+Then, according to a certain energy distribution, the intensity of different balmer lines will be fixed, according to their energy. A calculated intensity table, presented by calculating the intensity over the H-beta lines, is as follows:
+</p>
+<hr>
+<div class="image-container">
+  <img src="theoreticalDerement.png" alt="Description of the image" width="500" >
+</div>
+<hr>
+<p class="paragraph">
+  However, when the light passes through interstellar medium, that is the dust between the observer and the source, shorter wavelength got scattered more than the longer ones, and thus, it reddens.
+</p>
+<hr>
+<div class="image-container">
+  <img src="reddeningWhy.png" alt="Description of the image" width="800" >
+</div>
+<hr>
+
+<p class="paragraph">
+To measure reddening, several different methods are developed and they are:
+</p>
+<hr>
+<div class="image-container">
+  <img src="redenEquations.png" alt="Description of the image" width="800" >
+</div>
+
+<hr>
+<h2>Measurements</h2>
+<p class="paragraph">
+Following is the location of M42 I measured:
+</p>
+<hr>
+<div class="image-container">
+  <img src="whereM42.png" alt="Description of the image" width="800" >
+</div>
+<p class="paragraph">
+  The spectrum image I got
+  </p>
+<div class="image-container">
+  <img src="spectrumResult.png" alt="Description of the image" width="800" >
+</div>
 
 </body>
 </html>
